@@ -1,0 +1,122 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(221, 236, 236);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 40rem;
+  border-radius: 15px;
+  background: rgb(68, 67, 67);
+  box-shadow: 1px 1px 5px 3px black;
+  z-index: 2;
+}
+
+.screen {
+  width: 93%;
+  height: 38rem;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px 1px rgb(68, 67, 67);
+}
+
+.side_btn {
+  margin-bottom: 50px;
+}
+
+.volume {
+  width: 20px;
+  height: 120px;
+  border-radius: 5px;
+  position: relative;
+  right: 11px;
+  bottom: 130px;
+  background: rgb(59, 58, 58);
+  box-shadow: 1px 1px 3px 1px black;
+  z-index: 1;
+}
+
+.power {
+  width: 20px;
+  height: 50px;
+  border-radius: 5px;
+  position: relative;
+  right: 11px;
+  bottom: 100px;
+  background: rgb(59, 58, 58);
+  box-shadow: 1px 1px 3px 1px black;
+  z-index: 1;
+}
+
+@media screen and (max-width: 280px) {
+  .phone_body {
+      width: 14rem;
+  }
+  .screen {
+      width: 14rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .phone_body {
+      width: 20rem;
+  }
+  .screen {
+      width: 19rem;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .phone_body {
+      height: 36rem;
+  }
+  .screen {
+      height: 32rem
+  }
+}
+
+
+
+.cover {
+  height: 32rem;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.cover::-webkit-scrollbar{
+  width:4px;
+  background-color:#000;
+  }
+  
+.cover::-webkit-scrollbar-thumb{
+background:#7e7f80;
+border-radius:5px;
+}
+
+.inner-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.footer-icon {
+  position: absolute;
+  bottom: 0%;
+  padding: 0px 10px 10px 10px; 
+}
+
+.material-icons {
+  font-size: 35px;
+}

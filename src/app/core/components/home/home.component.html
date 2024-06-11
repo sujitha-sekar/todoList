@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div class="container">
+  <div class="phone_body">
+    <div class="screen">
+      <div class="inner-container">
+        <div style="height: 100%;width: 100%;" fxLayout="column" fxLayoutAlign="center center">
+          <div class="cover">
+            <router-outlet></router-outlet>
+          </div>
+          <div class="footer-icon" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="14%">
+            <span class="material-icons" routerLink="dashboard">home</span>
+            <span class="material-icons" routerLink="lists">list</span>
+            <span class="material-icons" routerLink="">notifications</span>
+            <span class="material-icons" routerLink="">search</span>
+            <span class="material-icons" routerLink="">person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="side_btn">
+    <div class="volume"></div>
+    <div class="power"></div>
+  </div>
+</div>
