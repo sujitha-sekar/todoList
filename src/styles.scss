@@ -36,7 +36,7 @@ $custom-primary-color: (
 
 $custom-secondary-color: (
   50 : #fdf5ea,
-  100 : #fbe6c9,
+  100 : var(--light-text-color),
   200 : #f9d5a6,
   300 : #f6c482,
   400 : #f4b767,
@@ -81,7 +81,9 @@ $my-theme: mat.define-light-theme((color: (primary: $my-primary,
 :root {
   --secondary-text-color: #f2aa4c;
   --primary-text-color: #101820;
+  --light-text-color: #fbe6c9;
 }
+
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
@@ -111,4 +113,12 @@ html {
 
 .dark {
   color: var(--secondary-text-color);
+}
+
+.light {
+  color: var(--light-text-color);
+}
+
+.mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+  border-color: var(--secondary-text-color) !important;
 }
