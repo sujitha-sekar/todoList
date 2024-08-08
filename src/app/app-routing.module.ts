@@ -5,11 +5,11 @@ import { DashboardComponent } from './core/components/dashboard/dashboard.compon
 import { ListsComponent } from './core/components/lists/lists.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent, children: [
-    { path: 'dashboard', component: DashboardComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
+  { path: 'dashboard', component: DashboardComponent, children: [
     { path: 'lists', component: ListsComponent}
-  ]}
+  ]},
 ];
 
 @NgModule({

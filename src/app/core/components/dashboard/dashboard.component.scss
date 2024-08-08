@@ -1,14 +1,29 @@
-.girl {
-  background: url('/assets/girl.png');
-  background-color: #f0f2ed;  
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 100%;
-  width: 100%;
+.example-spacer {
+  flex: 1 1 auto;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
+#toolbar {
+  color: var(--navbar-color);
+}
+
+.menu-logout {
+  font-size: 16px;
+  cursor: pointer;
+  place-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+
+.menu-logout p {
+  margin: 12px 6px;
+}
+
+.material-icons {
+  font-size: 30px;
+}
+
+.content {
+  padding: 16px;
 }

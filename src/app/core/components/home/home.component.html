@@ -1,24 +1,45 @@
+<div class="navbar" id="navbar">
+  <div class="logo">
+    <a href="#" style="font-size: 20px;">Habit Tracker</a>
+  </div>
+  <div class="nav-links">
+    <a href="#">Product List</a>
+    <a href="#">Product Details</a>
+  </div>
+</div>
 <div class="container">
-  <div class="phone_body">
-    <div class="screen">
-      <div class="inner-container">
-        <div style="height: 100%;width: 100%;" fxLayout="column" fxLayoutAlign="center center">
-          <div class="cover">
-            <router-outlet></router-outlet>
-          </div>
-          <div class="footer-icon" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="14%">
-            <span class="material-icons" routerLink="dashboard">home</span>
-            <span class="material-icons" routerLink="lists">list</span>
-            <span class="material-icons" routerLink="">notifications</span>
-            <span class="material-icons" routerLink="">search</span>
-            <span class="material-icons" routerLink="">person</span>
-          </div>
-        </div>
-      </div>
+  <h1 class="dark">Welcome to Habit Tracker</h1>
+  <p class="dark">Explore the beauty of people habits.</p>
+  <a href="#features" class="cta-button">Learn More</a>
+</div>
+
+<div fxLayout="row wrap" class="main" fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutGap="5%" fxLayoutAlign="center center">
+    <div class="image-container">
+      <img src="../../../../assets/img2.png" />
+    </div>
+    <div (click)="navigateTo()">
+      <h1 class="dark header">Daily Goals</h1>
     </div>
   </div>
-  <div class="side_btn">
-    <div class="volume"></div>
-    <div class="power"></div>
+  <div fxLayout="column" fxLayoutGap="5%" fxLayoutAlign="center center">
+    <div class="image-container">
+      <img src="../../../../assets/img8.png" />
+    </div>
+    <div>
+      <h1 class="dark header">Weekly Goals</h1>
+    </div>
   </div>
+  <div fxLayout="column" fxLayoutGap="5%" fxLayoutAlign="center center">
+    <div class="image-container">
+      <img src="../../../../assets/img5.png" />
+    </div>
+    <div>
+      <h1 class="dark header">Monthly Goals</h1>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h1>Copyright @2024, Designed by SUJITHA</h1>
 </div>

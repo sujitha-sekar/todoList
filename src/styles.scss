@@ -1,9 +1,114 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Define $custom-primary-color here in styles.scss
+$custom-primary-color: (
+  50 : #e2e3e4,
+  100 : #b7babc,
+  200 : #888c90,
+  300 : #585d63,
+  400 : #343b41,
+  500 : #101820,
+  600 : #0e151c,
+  700 : #0c1118,
+  800 : #090e13,
+  900 : #05080b,
+  A100 : var(--primary-text-color),
+  A200 : #1e60ff,
+  A400 : #0044ea,
+  A700 : #003dd0,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$custom-secondary-color: (
+  50 : #fdf5ea,
+  100 : #fbe6c9,
+  200 : #f9d5a6,
+  300 : #f6c482,
+  400 : #f4b767,
+  500 : var(--secondary-text-color),
+  600 : #f0a345,
+  700 : #ee993c,
+  800 : #ec9033,
+  900 : #e87f24,
+  A100 : #ffffff,
+  A200 : #fff6ef,
+  A400 : #ffd9bc,
+  A700 : #ffcba2,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$my-primary: mat.define-palette($custom-primary-color, 500);
+$my-accent: mat.define-palette($custom-secondary-color, 500);
+
+$my-theme: mat.define-light-theme((color: (primary: $my-primary,
+        accent: $my-accent,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0,
+    ));
+
+@include mat.all-component-themes($my-theme);
+
+:root {
+  --secondary-text-color: #f2aa4c;
+  --primary-text-color: #101820;
+}
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
 
-.material-icons , button {
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.material-icons,
+button {
   cursor: pointer;
+}
+
+html {
+  --mat-toolbar-standard-height: 90px;
+  --mat-toolbar-title-text-size: 30px;
+}
+
+.primary {
+  color: --primary-text-color;
+}
+
+.dark {
+  color: var(--secondary-text-color);
 }

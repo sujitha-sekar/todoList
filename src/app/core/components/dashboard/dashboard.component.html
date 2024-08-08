@@ -1,5 +1,14 @@
-<div class="container">
-  <div style="height: 100%;width: 100%;" fxLayout="column" fxLayoutAlign="center center">
-    <div class="girl"></div>
-  </div>
-</div>
+  <!-- Tool Bar -->
+  <mat-toolbar color="primary" id="navbar">
+    <span class="dark">Schedule</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent">Add Task</button>
+    <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+      <span class="material-icons dark">account_circle</span>
+    </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before" fxLayoutAlign="center center">
+      <div class="menu-logout">
+        <p class="primary" (click)="logout()">Logout </p>&nbsp;<span class="material-icons primary">logout</span>
+      </div>
+    </mat-menu>
+  </mat-toolbar>
