@@ -1,23 +1,35 @@
-.container {
-  background-color: #f0f2ed;  
+.list-containter {
+  margin: 20px;
 }
 
-.header {
-  background-color: rgb(102, 218, 247);
-  padding: 20px 10px 30px 10px;
+.border {
+  border-left: 6px solid var(--secondary-text-color);
+  width: 300px;
+  margin: 20px;
+  background-color: var(--primary-text-color);
+  border-radius: 4px;
+  padding: 10px 0px 10px 10px;
 }
 
-.header h5, .material-icons {
-  color: white;
-  font-size: 25px;
+img {
+  width: 30px;
+  margin-right: 10px;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: var(--secondary-text-color);
 }
 
-.box-container {
-  padding: 15px;
+p {
+  margin: 0;
 }
 
-.box1 {
-  height: 100px;
-  background-color: #58f5b9;
-  margin: 10px;
+.taskname {
+  font-weight: 600;
+}
+
+.date {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: cursive;
+  text-shadow: 4px 4px 4px var(--secondary-text-color);
 }

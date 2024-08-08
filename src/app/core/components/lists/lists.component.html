@@ -1,5 +1,22 @@
-<div>
+<div fxLayout="column" >
+  <div class="list-containter" fxLayout="row" fxLayoutGap="3%" fxLayoutAlign="start center">
+    <button mat-flat-button color="accent" (click)="chooseDay()">Choose Day</button>
+    <p class="primary date">{{selectedDay | date: 'fullDate'}}</p>
+  </div>
   <div fxLayout="column" fxLayouGap="3%">
-    
+    <div *ngFor="let list of array">
+      <div class="border" fxLayout="row">
+        <div fxLayoutAlign="center center">
+          <img [src]="list.img" />
+        </div>
+        <div fxFlex="90%" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center start">
+          <p class="dark taskname">{{list.taskName}}</p>
+          <p class="light">{{list.priority}}</p>
+        </div>
+        <div fxFlex fxLayoutAlign="center center">
+          <mat-radio-button></mat-radio-button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

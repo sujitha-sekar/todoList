@@ -4,6 +4,7 @@ import { MaterialModule } from '../material/material.module';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ListsComponent } from './components/lists/lists.component';
+import { DatepickerDialogComponent } from './components/datepicker-dialog/datepicker-dialog.component';
 
 
 
@@ -11,7 +12,8 @@ import { ListsComponent } from './components/lists/lists.component';
   declarations: [
     HomeComponent,
     DashboardComponent,
-    ListsComponent
+    ListsComponent,
+    DatepickerDialogComponent
   ],
   imports: [
     CommonModule,

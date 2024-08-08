@@ -1,0 +1,18 @@
+<div class="date-dialog-outer">
+  <h2 mat-dialog-title>Choose your Day</h2>
+  <form [formGroup]="dateForm">
+    <mat-dialog-content align="center">
+      <mat-form-field>
+        <mat-label>Select a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="selectedDate">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayoutAlign="end end">
+      <button mat-stroked-button mat-dialog-close color="accent">Clear</button>
+      <button mat-flat-button mat-dialog-close="true" color="accent" [disabled]="dateForm.invalid"
+        (click)="onSelect()">Save</button>
+    </mat-dialog-actions>
+  </form>
+</div>
