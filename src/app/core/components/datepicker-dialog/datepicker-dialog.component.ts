@@ -17,7 +17,7 @@ export class DatepickerDialogComponent implements OnInit {
 
   ngOnInit() {
     this.dateForm = new FormGroup({
-      selectedDate: new FormControl(null, Validators.required)
+      selectedDate: new FormControl(this.today, Validators.required)
     });
   }
 
