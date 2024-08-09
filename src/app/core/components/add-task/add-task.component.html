@@ -1,0 +1,27 @@
+<div fxLayoutAlign="center center" fxLayout="column" class="task-outer">
+  <img class="emoji1" src="../../../../assets/emoji1.png" />
+  <h1 class="primary">Add New Task🏅</h1>
+  <form [formGroup]="taskForm">
+    <mat-dialog-content align="center">
+      <div fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center center">
+        <!-- Task Name -->
+        <mat-form-field appearance="outline">
+          <mat-label>Task Name</mat-label>
+          <input matInput formControlName="taskName">
+        </mat-form-field>
+        <!-- Priority -->
+        <mat-form-field appearance="outline">
+          <mat-label>Priority</mat-label>
+          <mat-select formControlName="priority">
+            <mat-option *ngFor="let priority of taskPriority" [value]="priority">{{priority}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayoutAlign="center center">
+      <button mat-stroked-button mat-dialog-close color="accent">Clear</button>
+      <button mat-flat-button mat-dialog-close="true" color="accent" [disabled]="taskForm.invalid"
+        (click)="addTask()">Save</button>
+    </mat-dialog-actions>
+  </form>
+</div>

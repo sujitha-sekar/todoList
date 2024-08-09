@@ -1,19 +1,19 @@
 const tasklist = require('../models').tasklist;
+const addtask = require('../models').addtask;
 
-
-const createTasklist = async function (req, res) {
+const createNewTask = async function (req, res) {
   let err;
   let body = req.body;
-  [err, tasklist] = await to(tasklist.create(body));
+  [err, response] = await to(addtask.create(body));
   if (err) return ReE(res, err, 422);
-  return ReS(res, { tasklist });
+  return ReS(res, { response });
 }
-module.exports.createTasklist = createTasklist;
+module.exports.createNewTask = createNewTask;
 
 const getAllTask = async function (req, res) {
   let err;
   let body = req.body;
-  [err, tasklists] = await to(tasklist.findAll(body));
+  [err, tasklists] = await to(addtask.findAll(body));
   if (err) return ReE(res, err, 422);
   return ReS(res, { tasklists });
 }

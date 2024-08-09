@@ -11,4 +11,8 @@ export class DailyTaskService {
   getAllTask() {
     return this.httpService.getMethod('getAllTask')
   }
+
+  createNewTask(data: any) {
+    return this.httpService.postMethod('createNewTask' , data);
+  }
 }

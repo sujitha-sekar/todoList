@@ -14,4 +14,8 @@ export class HttpRoutingService {
   getMethod(url: string) {
     return this.http.get(this.apiUrl + 'v1/' + url);
   }
+
+  postMethod(url: string, data: any) {
+    return this.http.post(this.apiUrl + 'v1/' + url , data);
+  }
 }

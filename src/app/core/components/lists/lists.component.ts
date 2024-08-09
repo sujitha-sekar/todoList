@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DatepickerDialogComponent } from '../datepicker-dialog/datepicker-dialog.component';
 import { DailyTaskService } from '../../services/daily-task.service';
+import { AddTaskComponent } from '../add-task/add-task.component';
 
 interface TaskList {
   taskName: string;
   priority: string;
-  status: boolean;
-  taskDate: Date;
 }
 
 @Component({
@@ -43,4 +42,20 @@ export class ListsComponent implements OnInit {
     })
   }
 
+  addTask() {
+    const dialogRef = new MatDialogConfig();
+    dialogRef.width = "500px";
+    const addTask = this.dialog.open(AddTaskComponent, dialogRef);
+    addTask.componentInstance.taskList.subscribe((res) => {
+      if(res) {
+        this.dailyTaskService.getAllTask().subscribe((res: any) => {
+          if (res)
+            this.taskList = res && res.tasklists;
+          console.log('list: ', this.taskList)
+        });
+      } else {
+        
+      }
+    })
+  }
 }
