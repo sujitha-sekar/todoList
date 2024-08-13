@@ -32,6 +32,7 @@ export class TodayComponent implements OnInit {
     this.dailyTaskService.getAllTask().subscribe((res: any) => {
       if (res) {
         this.todayTasks = res && res.tasklists;
+        console.log('todaytasks: ', this.todayTasks);
         this.loadForm();
       }
     });
@@ -50,10 +51,7 @@ export class TodayComponent implements OnInit {
             taskName: new FormControl(task.taskName),
             priority: new FormControl(task.priority),
             complete: new FormControl(false)
-          }));
-          this.dailyTaskService.createTodayTask(this.todayTasks).subscribe((res) => {
-            console.log('res: ', res);
-          });
+          }))
         }
       })
     }
@@ -67,6 +65,10 @@ export class TodayComponent implements OnInit {
         complete: item.complete,
         date: this.today
       }));
+      this.dailyTaskService.createTodayTask(this.formatTask).subscribe((res) => {
+        console.log('res: ', res);
+      });
+      console.log('formatted data:', this.formatTask);
     }
   }
 
