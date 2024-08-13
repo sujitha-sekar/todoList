@@ -15,4 +15,8 @@ export class DailyTaskService {
   createNewTask(data: any) {
     return this.httpService.postMethod('createNewTask' , data);
   }
+
+  createTodayTask(data: any) {
+    return this.httpService.postMethod('createTodayTask', data);
+  }
 }

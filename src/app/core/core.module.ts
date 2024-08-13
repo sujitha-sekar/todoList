@@ -6,6 +6,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ListsComponent } from './components/lists/lists.component';
 import { DatepickerDialogComponent } from './components/datepicker-dialog/datepicker-dialog.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { TodayComponent } from './components/today/today.component';
 
 
 
@@ -15,7 +16,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     DashboardComponent,
     ListsComponent,
     DatepickerDialogComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    TodayComponent
   ],
   imports: [
     CommonModule,

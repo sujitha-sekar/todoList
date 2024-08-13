@@ -1,0 +1,28 @@
+<div>
+  <div fxLayout="column">
+    <div class="list-containter" fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="start start">
+      <h3 class="primary date">{{today | date : 'fullDate'}}</h3>
+    </div>
+    <div fxLayout="column" fxLayouGap="3%">
+      <button mat-raised-button color="accent" style="width: fit-content;margin-left: 20px;"
+        (click)="onSave()">Save</button>
+      <form [formGroup]="todayForm">
+        <div formArrayName="allTask" *ngIf="todayTasks">
+          <div *ngFor="let list of todayTasks; let i=index" [formGroupName]="i">
+            <div class="border" fxLayout="row">
+              <div fxFlex="90%" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center start">
+                <p class="dark taskname">{{list.taskName}}</p>
+                <p class="light">{{list.priority}}</p>
+              </div>
+              <div fxFlex fxLayoutAlign="center center">
+                <mat-radio-group formControlName="complete">
+                  <mat-radio-button value="true"></mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
